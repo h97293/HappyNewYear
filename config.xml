@@ -6,7 +6,7 @@
         id        = "com.phonegap.HowNewYearApp"
         version   = "1.0.0">
 
-    <name>HappyNewYear/name>
+    <name>HappyNewYear</name>
 
     <description>
         Hello World sample application that responds to the deviceready event.
