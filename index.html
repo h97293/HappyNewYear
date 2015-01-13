@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="maximum-scale=1.5" />
+<title>Happy New Year</title>
+<style type="text/css">
+
+body {
+	background-color: #FCC900;
+}
+.title a strong {
+	font-size: 24px;
+}
+</style>
+
+<script type="text/javascript">
+
+var vname = ["media/1.webm", "media/2.webm", "media/3.webm", "media/4.webm", "media/5.webm", "media/6.webm", "media/7.webm", "media/8.webm", "media/9.webm", "media/10.webm"];
+
+window.onload=function(){
+  
+  var sound1 = document.getElementById('sound1');
+  //var happySound = document.getElementById('happySound');
+  //happySound.play();
+  
+};
+
+var vid =0;
+function play1(){
+
+  var happySound = document.getElementById('happySound');
+  //vid = Math.floor(Math.random() * 10);
+  vid = (vid+1)%10;
+  happySound.src = vname[vid];
+  happySound.play();
+  //alert(vname[vid]);
+}
+
+
+var mst = 0;
+function mute1(){
+   var a1 = document.getElementById("happySound");
+   var a2 = document.getElementById("sound1");
+   mst  = (mst+1)%2;
+   if(mst==1){
+    a1.muted = true;
+    a2.src = "img/sx.png";
+
+   } else {
+    a1.muted = false;
+    a2.src = "img/s.png";
+
+   }
+   
+
+}
+  
+</script>
+</head>
+<body>
+
+
+
+<table width="100%" height"100%" border="0">
+  <tr>
+    <td colspan="4" align="center"valign="middle";>	
+    <p><video id="happySound"poster="img/1_00000.png" src="media/1-1.mp4" width="80%" height="auto" onclick="play1()"/><p>   
+  </tr>
+  <tr>
+    <td width="10%" align="center"valign="middle";>         
+    <td width="43%" align="center"valign="middle";><a>
+      <img id="sound1" src="img/s.png" width="25%" height="auto"  onmousedown="mute1()"/></a>
+       
+    <td width="40%" align="center"valign="middle";>   
+    <a href="index2.html"><img id="happy" src="img/fire.png" width="25%" height="auto"/></a>      
+    <td width="10%" align="center"valign="middle";>    
+  </tr>
+</table>
+
+</body>
+</html>

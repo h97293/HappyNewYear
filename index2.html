@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="maximum-scale=1.5" />
+<title>Happy New Year</title>
+<style type="text/css">
+
+body {
+	background-color: #DDDDDD;
+	color: #FFFF00;
+}
+.title a strong {
+	font-size: 24px;
+}
+</style>
+
+
+</head>
+<body>
+
+<script type="text/javascript">
+
+
+window.onload=function(){
+// collecting elements
+var fireSound = document.getElementById('fireSound');
+var fire = document.getElementById('fire');
+var sound = document.getElementById('sound');
+
+//playing welcome sound on mouse over
+ fire.onmousedown=function(){
+ fireSound.play();
+ fire.play();
+ return false;
+};
+ 
+var mss = 0;
+
+sound.onmousedown=function(){
+
+
+
+ mst  = (mst+1)%2;
+ if(mst==1){
+    fireSound.muted = true;
+    sound.src = "img/sx.png";
+
+   } else {
+    fireSound.muted = false;
+    sound.src = "img/s.png";
+
+   }
+
+
+
+ return false;
+};
+ 
+};
+
+</script>
+
+
+ <audio id="fireSound"  preload="auto">
+  <source src="media/002.mpeg" ></source>
+  </audio>
+
+
+<table width="100%" height"100%" border="0">
+  <tr>
+    <td colspan="4" align="center"valign="middle";>	
+   
+    <a><video id ="fire" poster="img/fire(l).png" src="media/fire.webm"  loop="loop" width="80%" height="auto" onclick="play()"/>
+     </a><p>   
+  </tr>
+  <tr>
+    <td width="10%" align="center"valign="middle";>         
+    <td width="43%" align="center"valign="middle";><a>
+    <img id="sound" src="img/s.png" width="25%" height="auto" /></a>
+       
+    <td width="40%" align="center"valign="middle";>   
+    <a href="index.html"><img id="happy" src="img/h.png" width="25%" height="auto"/></a>      
+    <td width="10%" align="center"valign="middle";>
+  </tr>
+</table>
+
+</body>
+</html>
